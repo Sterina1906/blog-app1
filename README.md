@@ -1,7 +1,7 @@
-Chyrp - Social Media Platform
+#Chyrp - Social Media Platform
 Chyrp is a modern, responsive social media platform built with a FastAPI backend and vanilla JavaScript frontend. It allows users to share moments, connect with others, and express themselves through posts, likes, and comments.
 
-Features
+##Features
 User Authentication: Register and login with JWT token-based authentication
 
 Post Management: Create, read, update, and delete posts with text, images, and videos
@@ -18,7 +18,7 @@ Responsive Design: Works on desktop, tablet, and mobile devices
 
 Search Functionality: Find posts and users easily
 
-Technology Stack
+##Technology Stack
 Backend
 FastAPI: Modern, fast web framework for building APIs
 
@@ -41,21 +41,7 @@ Font Awesome: Icons
 
 Flexbox & Grid: Modern CSS layout techniques
 
-Project Structure
-text
-chyrp/
-├── backend/                 # FastAPI backend
-│   ├── main.py             # Main application file
-│   ├── models.py           # Database models
-│   ├── database.py         # Database configuration
-│   ├── auth.py             # Authentication utilities
-│   ├── requirements.txt    # Python dependencies
-│   └── uploads/            # Uploaded media files
-│       ├── images/
-│       └── videos/
-└── frontend/               # Frontend files
-    └── index.html          # Main HTML file with JS and CSS
-Installation & Setup
+#Installation & Setup
 Prerequisites
 Python 3.7+
 
@@ -65,50 +51,47 @@ A modern web browser
 
 Backend Setup
 Navigate to the backend directory:
-
 bash
 cd backend
-Create a virtual environment (recommended):
 
+Create a virtual environment (recommended):
 bash
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
-Install dependencies:
 
+Install dependencies:
 bash
 pip install -r requirements.txt
-Run the backend server:
 
+Run the backend server:
 bash
 uvicorn main:app --reload
+
 The backend will be available at http://localhost:8000
 
-Access API documentation:
+#Access API documentation:
 
 Swagger UI: http://localhost:8000/docs
 
-ReDoc: http://localhost:8000/redoc
-
-Frontend Setup
+##Frontend Setup
 Serve the frontend files using any HTTP server:
 
 Option 1: Python HTTP server
-
 bash
 python -m http.server 3000
-Option 2: Node.js serve
 
+Option 2: Node.js serve
 bash
 npx serve .
-Option 3: PHP server
 
+Option 3: PHP server
 bash
 php -S localhost:3000
-Open your browser and navigate to:
 
-text
+Open your browser and navigate to:
 http://localhost:3000
-API Endpoints
+
+##API Endpoints
 Authentication
 POST /register - Create a new user account
 
@@ -161,7 +144,7 @@ POST /messages/{user_id} - Send a message to a user
 Search
 GET /search - Search for posts or users
 
-Configuration
+##Configuration
 Environment Variables
 Create a .env file in the backend directory with the following variables:
 
@@ -169,15 +152,15 @@ env
 SECRET_KEY=your-super-secret-key-here
 DATABASE_URL=sqlite+aiosqlite:///./chyrp.db
 CORS Settings
-The backend is configured to allow requests from:
 
+The backend is configured to allow requests from:
 http://localhost:3000
 
 http://127.0.0.1:3000
 
 Update the origins list in main.py if you need to allow other domains.
 
-Usage Guide
+##Usage Guide
 Creating an Account
 Open the application in your browser
 
@@ -187,7 +170,7 @@ Fill in your details: email, username, full name, and password
 
 Submit the form to create your account
 
-Creating a Post
+##Creating a Post
 Log in to your account
 
 Click the "+" icon in the navigation bar
@@ -225,7 +208,7 @@ Night: Dark mode with green accents
 
 Blossom: Pink and pastel gradient
 
-Troubleshooting
+##Troubleshooting
 Common Issues
 CORS Errors
 
@@ -267,57 +250,6 @@ Monitor the Network tab for API request/response details
 API Testing
 
 Use the Swagger UI at http://localhost:8000/docs to test endpoints directly
-
-Deployment
-Backend Deployment
-The FastAPI backend can be deployed to various platforms:
-
-Heroku: Use the Procfile and runtime.txt
-
-DigitalOcean: Use App Platform or Droplets
-
-AWS: Use Elastic Beanstalk or EC2
-
-Google Cloud: Use App Engine or Compute Engine
-
-Frontend Deployment
-The frontend can be deployed to:
-
-Netlify: Drag and drop the frontend folder
-
-Vercel: Connect your GitHub repository
-
-GitHub Pages: Host directly from your repository
-
-Any static hosting service: The frontend is static HTML/CSS/JS
-
-Database Considerations
-For production, consider switching from SQLite to:
-
-PostgreSQL
-
-MySQL
-
-AWS RDS
-
-Google Cloud SQL
-
-Update the DATABASE_URL in your environment variables accordingly.
-
-Contributing
-Fork the repository
-
-Create a feature branch: git checkout -b feature-name
-
-Make your changes
-
-Test thoroughly
-
-Commit your changes: git commit -am 'Add new feature'
-
-Push to the branch: git push origin feature-name
-
-Submit a pull request
 
 License
 This project is open source and available under the MIT License.
