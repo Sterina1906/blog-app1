@@ -1,7 +1,7 @@
-#Chyrp - Social Media Platform
+# **Chyrp - Social Media Platform**
 Chyrp is a modern, responsive social media platform built with a FastAPI backend and vanilla JavaScript frontend. It allows users to share moments, connect with others, and express themselves through posts, likes, and comments.
 
-##Features
+## **Features**
 User Authentication: Register and login with JWT token-based authentication
 
 Post Management: Create, read, update, and delete posts with text, images, and videos
@@ -18,8 +18,8 @@ Responsive Design: Works on desktop, tablet, and mobile devices
 
 Search Functionality: Find posts and users easily
 
-##Technology Stack
-Backend
+## **Technology Stack**
+### **Backend**
 FastAPI: Modern, fast web framework for building APIs
 
 SQLite: Lightweight database (can be easily switched to PostgreSQL/MySQL)
@@ -41,7 +41,7 @@ Font Awesome: Icons
 
 Flexbox & Grid: Modern CSS layout techniques
 
-#Installation & Setup
+## **Installation & Setup**
 Prerequisites
 Python 3.7+
 
@@ -69,11 +69,11 @@ uvicorn main:app --reload
 
 The backend will be available at http://localhost:8000
 
-#Access API documentation:
+## **Access API documentation:**
 
 Swagger UI: http://localhost:8000/docs
 
-##Frontend Setup
+## **Frontend Setup**
 Serve the frontend files using any HTTP server:
 
 Option 1: Python HTTP server
@@ -91,7 +91,7 @@ php -S localhost:3000
 Open your browser and navigate to:
 http://localhost:3000
 
-##API Endpoints
+## **API Endpoints**
 Authentication
 POST /register - Create a new user account
 
@@ -144,7 +144,7 @@ POST /messages/{user_id} - Send a message to a user
 Search
 GET /search - Search for posts or users
 
-##Configuration
+## **Configuration**
 Environment Variables
 Create a .env file in the backend directory with the following variables:
 
@@ -170,7 +170,7 @@ Fill in your details: email, username, full name, and password
 
 Submit the form to create your account
 
-##Creating a Post
+## **Creating a Post**
 Log in to your account
 
 Click the "+" icon in the navigation bar
@@ -208,33 +208,33 @@ Night: Dark mode with green accents
 
 Blossom: Pink and pastel gradient
 
-##Troubleshooting
-Common Issues
+## **Troubleshooting**
+### Common Issues
 CORS Errors
 
 Ensure the backend is running on port 8000
 
 Check that the frontend URL is in the allowed origins list
 
-Authentication Errors
+### Authentication Errors
 
 Verify your token is being stored correctly in localStorage
 
 Check that the token is included in request headers
 
-File Upload Issues
+### File Upload Issues
 
 Ensure the uploads directory exists and has write permissions
 
 Check that file size limits are appropriate for your needs
 
-Database Issues
+### Database Issues
 
 Verify the database file exists and is accessible
 
 Check that database migrations have been applied
 
-Debugging
+### Debugging
 Backend Logs
 
 Check the console output from the FastAPI server for errors
@@ -247,21 +247,12 @@ Check the Console tab for JavaScript errors
 
 Monitor the Network tab for API request/response details
 
-API Testing
+### API Testing
 
 Use the Swagger UI at http://localhost:8000/docs to test endpoints directly
 
-License
+## **License** 
 This project is open source and available under the MIT License.
 
-Support
-If you encounter any issues or have questions:
 
-Check the troubleshooting section above
 
-Review the API documentation at http://localhost:8000/docs
-
-Create an issue in the GitHub repository
-
-Future Enhancements
-Potential features for future versions:
